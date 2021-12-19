@@ -7,7 +7,7 @@ const userRoutes = require('./routes/userRoutes')
 const cookieParser = require('cookie-parser')
 const { checkUser } = require('./middleware/authMiddleware')
 const path = require('path')
-require('dotenv').config()
+require('dotenv').config();
 
 
 const app = express()
@@ -77,7 +77,7 @@ mongoose
   })
   .then((result) => {
     console.log('mongoose connected')
-    server.listen(port, () => {
+    server.listen(process.env.PORT || port, () => {
       console.log(`Listening at port ${port}`);
     })
   }
