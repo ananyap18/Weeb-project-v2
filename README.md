@@ -35,6 +35,9 @@ A social edia platform to connect with your friends
 
 
 
+
+
+
 A place to have a room of one time chats
 ![image](https://user-images.githubusercontent.com/71277914/146971615-e4b6aacf-c905-4ba3-9a3c-61975c574e22.png)
 
