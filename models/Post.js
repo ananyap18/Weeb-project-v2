@@ -17,6 +17,10 @@ const postSchema = new mongoose.Schema({
     type: ObjectId,
     ref: "user"
   },
+  likes:[{
+    type:ObjectId,
+    ref:"User"
+  }],
   reacts: [{
     createdBy: {
       type: ObjectId,

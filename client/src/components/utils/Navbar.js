@@ -32,7 +32,7 @@ function Navbar() {
           <li className="navStyle btn">Create Post</li>
         </Link>,
         <Link to="/userSubPost" key={"3"}>
-          <li className="navStyle">Subcribe Post</li>
+          <li className="navStyle">Subscribe Post</li>
         </Link>,
         <Link to="/logout" key={"4"}>
           <li className="navStyle btn">Log Out</li>

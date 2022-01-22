@@ -13,7 +13,7 @@ function Post({ post }) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState("");
-
+  const {state,dispatch} = useContext(UserContext)
 
   const getComments = async () => {
     try {
@@ -111,6 +111,26 @@ function Post({ post }) {
           <p>{post.body}</p>
 
           <hr />
+          <div className = "card-content">
+            <i className = "Material-icons" style={{color:"red"}}>favorite</i>
+            {item.likes.includes(state._id)
+            ?  
+              <i className="material-icons"
+              onClick={()=>{unlikePost(item._id)}}
+              >thumb_down</i>
+            :
+              <i className = "material-icons"
+              onClick={()=>{likePost(item._id)}}
+              >thumb_up</i>
+            }
+            <i className = "material-icons"
+            onClick={()=>{likePost(item._id)}}
+            >thumb_up</i>
+            <i className="material-icons"
+            onClick={()=>{unlikePost(item._id)}}
+            >thumb_down</i>
+            <h6>{Item.likes.length} likes </h6>
+          </div>
 
           <div className="comments">
             {comments.map((comment) => (
